@@ -5,13 +5,15 @@
         <div class="text-center pb-5">
           <%= image_tag "login_1.svg", class: "" , style: "max-width: 55%;"%>
         </div>
+         <h1 class="h4 text-primary pb-4 pt-0 text-center">Log in</h1>
         <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
           <div class="form-group pb-2">
-            <%= f.email_field :email, autofocus: false, autocomplete: "email", class: "form-control", placeholder: "E-mail" %>
+            <%= f.email_field :email, autofocus: false, autocomplete: "email", class: "form-control", placeholder: "E-mail", require: true %>
           </div>
 
           <div class="form-group pb-2">
-            <%= f.password_field :password, autofocus: false,  class: "form-control", placeholder: "Password" %>
+            <%= f.password_field :password, autofocus: false,  class: "form-control", placeholder: "Password", require: true %>
           </div>
 
           <% if devise_mapping.rememberable? %>
