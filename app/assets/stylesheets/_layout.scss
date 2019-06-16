@@ -1,3 +1,12 @@
-body {
-  height: 100vh;
+html, body {
+  position: relative;
+  min-height: 100%;
+}
+
+.form-control {
+  padding: 1.6rem 1.6rem 1.6rem 1rem !important;
+  cursor: auto !important;
+  border: none !important;
+  border-radius: 0.3rem !important;
+  background-color: #eeeeeeb3 !important;
 }
