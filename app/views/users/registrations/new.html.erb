@@ -1,19 +1,19 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-7 col-sm-12 col-xs-12 p-5">
+    <div class="col-md-7 col-sm-12 p-2">
       <div class="card p-5 shadow">
         <div class="text-center pb-5">
-          <%= image_tag "signup_2.svg", class: "" , style: "max-width: 55%;"%>
+          <%= image_tag "setup_profile.svg", class: "" , style: "max-width: 55%;"%>
         </div>
          <h1 class="h4 text-primary pb-4 pt-0 text-center">Let's Setup Your Profile</h1>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
-          <div class="row mb-4">
-            <div class="col-md-6 col-sm-12">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 mb-4">
               <%= f.text_field :first_name, class: "form-control", autofocus: false, placeholder: "First Name" %>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-12 mb-4">
               <%= f.text_field :last_name, class: "form-control", autofocus: false, placeholder: "Last Name" %>
             </div>
           </div>
